@@ -42,7 +42,15 @@
     </div>
     <script>
         // var x = Math.floor((Math.random() * 10000) + 1);
-        var x = Math.floor(1000 + Math.random() * 9000);
+        function random4Digit(){
+        return shuffle( "0123456789".split('') ).join('').substring(0,4);
+        }
+
+        function shuffle(o){
+        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+        }
+        var x = random4Digit();
         var click = 1;
         function check(){
         console.log(x);
