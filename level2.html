@@ -1,0 +1,356 @@
+<html>
+    <head>
+        <title>Crack the code</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color:burlywood;">
+        <div style="padding: 10%; margin-left: 400px;">
+            <p style="text-align:justify;"><b>ENTER THE NUMBER TO CRACK THE CODE <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; LEVEL 2</b></p><br><br>
+
+        <input type="tel" id = "chk1_nu_1" style="border-radius: 200%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id = "chk1_nu_2"style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id = "chk1_nu_3"style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id = "chk1_nu_4"style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id = "chk1_nu_5"style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <br><br>
+        <input type="tel" id ="chk2_nu_1"  style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk2_nu_2" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk2_nu_3" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk2_nu_4" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk2_nu_5" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <br><br>
+        <input type="tel" id ="chk3_nu_1" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk3_nu_2" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk3_nu_3" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk3_nu_4" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk3_nu_5" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <br><br>
+        <input type="tel" id ="chk4_nu_1" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk4_nu_2" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk4_nu_3" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk4_nu_4" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk4_nu_5" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <br><br>
+        <input type="tel" id ="chk5_nu_1" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk5_nu_2" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk5_nu_3" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk5_nu_4" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+        <input type="tel" id ="chk5_nu_5" style="border-radius: 100%; width: 75px; text-align: center;background-color: grey;"  maxlength="1">&emsp;
+
+        <br><br>
+
+        <input type="button" value="Check" style="margin-left: 200px;background-color:yellowgreen;" onclick="check()">
+
+
+
+    </div>
+    <script>
+        // var x = Math.floor((Math.random() * 10000) + 1);
+        var x = Math.floor(10000 + Math.random() * 9000);
+        var click = 1;
+        function check(){
+        console.log(x);
+        console.log(document.getElementById("chk1_nu_1").value);
+        var out = [],
+        sNumber = x.toString();
+        for(var i =0,len = sNumber.length;i<len;i +=1){
+            out.push(+sNumber.charAt(i));
+        }
+        if (click == 1){
+        if(document.getElementById("chk1_nu_1").value == out[0] ){
+            document.getElementById("chk1_nu_1").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk1_nu_1").value == out[1] || document.getElementById("chk1_nu_1").value == out[2] || document.getElementById("chk1_nu_1").value == out[3] || document.getElementById("chk1_nu_1").value == out[4]){
+            document.getElementById("chk1_nu_1").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk1_nu_1").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk1_nu_2").value == out[1] ){
+            document.getElementById("chk1_nu_2").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk1_nu_2").value == out[0] || document.getElementById("chk1_nu_2").value == out[2] || document.getElementById("chk1_nu_2").value == out[3] || document.getElementById("chk1_nu_2").value == out[4]){
+            document.getElementById("chk1_nu_2").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk1_nu_2").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk1_nu_3").value == out[2] ){
+            document.getElementById("chk1_nu_3").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk1_nu_3").value == out[0] || document.getElementById("chk1_nu_3").value == out[1] || document.getElementById("chk1_nu_3").value == out[3] || document.getElementById("chk1_nu_3").value == out[4] ){
+            document.getElementById("chk1_nu_3").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk1_nu_3").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk1_nu_4").value == out[3] ){
+            document.getElementById("chk1_nu_4").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk1_nu_4").value == out[0] || document.getElementById("chk1_nu_4").value == out[1] || document.getElementById("chk1_nu_4").value == out[2] || document.getElementById("chk1_nu_4").value == out[4] ){
+            document.getElementById("chk1_nu_4").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk1_nu_4").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk1_nu_5").value == out[4] ){
+            document.getElementById("chk1_nu_5").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk1_nu_5").value == out[0] || document.getElementById("chk1_nu_5").value == out[1] || document.getElementById("chk1_nu_5").value == out[2] || document.getElementById("chk1_nu_5").value == out[3] ){
+            document.getElementById("chk1_nu_5").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk1_nu_5").style.backgroundColor = "red"
+        }
+
+
+        document.getElementById("chk1_nu_1").disabled = true;
+        document.getElementById("chk1_nu_2").disabled = true;
+        document.getElementById("chk1_nu_3").disabled = true;
+        document.getElementById("chk1_nu_4").disabled = true;
+        document.getElementById("chk1_nu_5").disabled = true;
+        if(document.getElementById("chk1_nu_1").value == out[0] && document.getElementById("chk1_nu_2").value == out[1] && document.getElementById("chk1_nu_3").value == out[2] && document.getElementById("chk1_nu_4").value == out[3] && document.getElementById("chk1_nu_5").value == out[4] ){
+            alert("Super!! you won and you have scored 50 points in this level")
+            window.location.href = "index.html"
+        }
+        }
+        console.log(click)
+        if(click ==2){
+            if(document.getElementById("chk2_nu_1").value == out[0] ){
+            document.getElementById("chk2_nu_1").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk2_nu_1").value == out[1] || document.getElementById("chk2_nu_1").value == out[2] || document.getElementById("chk2_nu_1").value == out[3] ||  document.getElementById("chk2_nu_1").value == out[4]){
+            document.getElementById("chk2_nu_1").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk2_nu_1").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk2_nu_2").value == out[1] ){
+            document.getElementById("chk2_nu_2").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk2_nu_2").value == out[0] || document.getElementById("chk2_nu_2").value == out[2] || document.getElementById("chk2_nu_2").value == out[3] ||  document.getElementById("chk2_nu_2").value == out[4]){
+            document.getElementById("chk2_nu_2").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk2_nu_2").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk2_nu_3").value == out[2] ){
+            document.getElementById("chk2_nu_3").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk2_nu_3").value == out[0] || document.getElementById("chk2_nu_3").value == out[1] || document.getElementById("chk2_nu_3").value == out[3] ||  document.getElementById("chk2_nu_3").value == out[4] ){
+            document.getElementById("chk2_nu_3").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk2_nu_3").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk2_nu_4").value == out[3] ){
+            document.getElementById("chk2_nu_4").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk2_nu_4").value == out[0] || document.getElementById("chk2_nu_4").value == out[1] || document.getElementById("chk2_nu_4").value == out[2] ||  document.getElementById("chk2_nu_4").value == out[4] ){
+            document.getElementById("chk2_nu_4").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk2_nu_4").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk2_nu_5").value == out[4] ){
+            document.getElementById("chk2_nu_5").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk2_nu_5").value == out[0] || document.getElementById("chk2_nu_5").value == out[1] || document.getElementById("chk2_nu_5").value == out[2] || document.getElementById("chk2_nu_5").value == out[3] ){
+            document.getElementById("chk2_nu_5").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk2_nu_5").style.backgroundColor = "red"
+        }
+
+        document.getElementById("chk2_nu_1").disabled = true;
+        document.getElementById("chk2_nu_2").disabled = true;
+        document.getElementById("chk2_nu_3").disabled = true;
+        document.getElementById("chk2_nu_4").disabled = true;
+        document.getElementById("chk2_nu_5").disabled = true;
+        if(document.getElementById("chk2_nu_1").value == out[0] && document.getElementById("chk2_nu_2").value == out[1] && document.getElementById("chk2_nu_3").value == out[2] && document.getElementById("chk2_nu_4").value == out[3] && document.getElementById("chk2_nu_5").value == out[4]){
+            alert("Super!! you won and you have scored 40 points in this level")
+            window.location.href = "index.html"
+        }
+        }
+        if(click == 3){
+            if(document.getElementById("chk3_nu_1").value == out[0] ){
+            document.getElementById("chk3_nu_1").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk3_nu_1").value == out[1] || document.getElementById("chk3_nu_1").value == out[2] || document.getElementById("chk3_nu_1").value == out[3] || document.getElementById("chk3_nu_1").value == out[4] ){
+            document.getElementById("chk3_nu_1").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk3_nu_1").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk3_nu_2").value == out[1] ){
+            document.getElementById("chk3_nu_2").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk3_nu_2").value == out[0] || document.getElementById("chk3_nu_2").value == out[2] || document.getElementById("chk3_nu_2").value == out[3] || document.getElementById("chk3_nu_2").value == out[4]){
+            document.getElementById("chk3_nu_2").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk3_nu_2").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk3_nu_3").value == out[2] ){
+            document.getElementById("chk3_nu_3").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk3_nu_3").value == out[0] || document.getElementById("chk3_nu_3").value == out[1] || document.getElementById("chk3_nu_3").value == out[3] || document.getElementById("chk3_nu_3").value == out[4] ){
+            document.getElementById("chk3_nu_3").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk3_nu_3").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk3_nu_4").value == out[3] ){
+            document.getElementById("chk3_nu_4").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk3_nu_4").value == out[0] || document.getElementById("chk3_nu_4").value == out[1] || document.getElementById("chk3_nu_4").value == out[2] || document.getElementById("chk3_nu_4").value == out[4] ){
+            document.getElementById("chk3_nu_4").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk3_nu_4").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk3_nu_5").value == out[4] ){
+            document.getElementById("chk3_nu_5").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk3_nu_5").value == out[0] || document.getElementById("chk3_nu_5").value == out[1] || document.getElementById("chk3_nu_5").value == out[2] || document.getElementById("chk3_nu_5").value == out[3] ){
+            document.getElementById("chk3_nu_5").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk3_nu_5").style.backgroundColor = "red"
+        }
+        document.getElementById("chk3_nu_1").disabled = true;
+        document.getElementById("chk3_nu_2").disabled = true;
+        document.getElementById("chk3_nu_3").disabled = true;
+        document.getElementById("chk3_nu_4").disabled = true;
+        document.getElementById("chk3_nu_5").disabled = true;
+        if(document.getElementById("chk3_nu_1").value == out[0] && document.getElementById("chk3_nu_2").value == out[1] && document.getElementById("chk3_nu_3").value == out[2] && document.getElementById("chk3_nu_4").value == out[3] && document.getElementById("chk3_nu_5").value == out[4] ){
+            alert("Super!! you won and you have scored 30 points in this level")
+            window.location.href = "index.html"
+        }
+        }
+        if(click == 4){
+            if(document.getElementById("chk4_nu_1").value == out[0] ){
+            document.getElementById("chk4_nu_1").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk4_nu_1").value == out[1] || document.getElementById("chk4_nu_1").value == out[2] || document.getElementById("chk4_nu_1").value == out[3] || document.getElementById("chk4_nu_1").value == out[4] ){
+            document.getElementById("chk4_nu_1").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk4_nu_1").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk4_nu_2").value == out[1] ){
+            document.getElementById("chk4_nu_2").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk4_nu_2").value == out[0] || document.getElementById("chk4_nu_2").value == out[2] || document.getElementById("chk4_nu_2").value == out[3] || document.getElementById("chk4_nu_2").value == out[4] ){
+            document.getElementById("chk4_nu_2").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk4_nu_2").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk4_nu_3").value == out[2] ){
+            document.getElementById("chk4_nu_3").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk4_nu_3").value == out[0] || document.getElementById("chk4_nu_3").value == out[1] || document.getElementById("chk4_nu_3").value == out[3] || document.getElementById("chk4_nu_3").value == out[4] ){
+            document.getElementById("chk4_nu_3").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk4_nu_3").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk4_nu_4").value == out[3] ){
+            document.getElementById("chk4_nu_4").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk4_nu_4").value == out[0] || document.getElementById("chk3_nu_4").value == out[1] || document.getElementById("chk3_nu_4").value == out[2] || document.getElementById("chk4_nu_4").value == out[4] ){
+            document.getElementById("chk4_nu_4").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk4_nu_4").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk4_nu_5").value == out[4] ){
+            document.getElementById("chk4_nu_5").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk4_nu_5").value == out[0] || document.getElementById("chk4_nu_5").value == out[1] || document.getElementById("chk4_nu_5").value == out[2] || document.getElementById("chk4_nu_5").value == out[3] ){
+            document.getElementById("chk4_nu_5").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk4_nu_5").style.backgroundColor = "red"
+        }
+        document.getElementById("chk4_nu_1").disabled = true;
+        document.getElementById("chk4_nu_2").disabled = true;
+        document.getElementById("chk4_nu_3").disabled = true;
+        document.getElementById("chk4_nu_4").disabled = true;
+        document.getElementById("chk4_nu_5").disabled = true;
+        if(document.getElementById("chk4_nu_1").value == out[0] && document.getElementById("chk4_nu_2").value == out[1] && document.getElementById("chk4_nu_3").value == out[2] && document.getElementById("chk4_nu_4").value == out[3] && document.getElementById("chk4_nu_5").value == out[4] ){
+            alert("Super!! you won and you have scored 30 points in this level")
+            window.location.href = "index.html"
+        }
+        }
+        if(click == 5){
+            if(document.getElementById("chk5_nu_1").value == out[0] ){
+            document.getElementById("chk5_nu_1").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk5_nu_1").value == out[1] || document.getElementById("chk5_nu_1").value == out[2] || document.getElementById("chk5_nu_1").value == out[3] || document.getElementById("chk5_nu_1").value == out[4] ){
+            document.getElementById("chk5_nu_1").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk5_nu_1").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk5_nu_2").value == out[1] ){
+            document.getElementById("chk5_nu_2").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk5_nu_2").value == out[0] || document.getElementById("chk5_nu_2").value == out[2] || document.getElementById("chk5_nu_2").value == out[3] || document.getElementById("chk5_nu_2").value == out[4]){
+            document.getElementById("chk5_nu_2").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk5_nu_2").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk5_nu_3").value == out[2] ){
+            document.getElementById("chk5_nu_3").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk5_nu_3").value == out[0] || document.getElementById("chk5_nu_3").value == out[1] || document.getElementById("chk5_nu_3").value == out[3] || document.getElementById("chk5_nu_3").value == out[4] ){
+            document.getElementById("chk5_nu_3").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk5_nu_3").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk5_nu_4").value == out[3] ){
+            document.getElementById("chk5_nu_4").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk5_nu_4").value == out[0] || document.getElementById("chk5_nu_4").value == out[1] || document.getElementById("chk5_nu_4").value == out[2] || document.getElementById("chk5_nu_4").value == out[4]){
+            document.getElementById("chk5_nu_4").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk5_nu_4").style.backgroundColor = "red"
+        }
+        if(document.getElementById("chk5_nu_5").value == out[4] ){
+            document.getElementById("chk5_nu_5").style.backgroundColor = "green"
+        }
+        else if(document.getElementById("chk5_nu_5").value == out[0] || document.getElementById("chk5_nu_5").value == out[1] || document.getElementById("chk5_nu_5").value == out[2] || document.getElementById("chk5_nu_5").value == out[3] ){
+            document.getElementById("chk5_nu_5").style.backgroundColor = "orange"
+        }
+        else{
+            document.getElementById("chk5_nu_5").style.backgroundColor = "red"
+        }
+        document.getElementById("chk5_nu_1").disabled = true;
+        document.getElementById("chk5_nu_2").disabled = true;
+        document.getElementById("chk5_nu_3").disabled = true;
+        document.getElementById("chk5_nu_4").disabled = true;
+        document.getElementById("chk5_nu_5").disabled = true;
+        if(document.getElementById("chk5_nu_1").value == out[0] && document.getElementById("chk5_nu_2").value == out[1] && document.getElementById("chk5_nu_3").value == out[2] && document.getElementById("chk5_nu_4").value == out[3] && document.getElementById("chk5_nu_5").value == out[4] ){
+            alert("Super!! you won and you have scored 20 points")
+            window.location.href = "index.html"
+        }
+        if(document.getElementById("chk5_nu_1").value != out[0] || document.getElementById("chk5_nu_2").value != out[1] || document.getElementById("chk5_nu_3").value != out[2] || document.getElementById("chk5_nu_4").value != out[3] || document.getElementById("chk5_nu_5").value != out[4] ){
+            alert("You lost the game. Try again.....")
+            window.location.href = "index.html"
+        }
+
+        }
+        
+        click = click + 1;
+        
+        
+        }
+    </script>
+    </body>
+</html>
